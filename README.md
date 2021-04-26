@@ -77,7 +77,7 @@ returns
         "type": "Key Hash"
       },
       {
-        "address":"simpleledger:qr932wdxkqdavp27y4pthxn7sf0awuwd7y2swnjm5m",
+        "address":"tt:qr932wdxkqdavp27y4pthxn7sf0awuwd7y2swnjm5m",
         "type":"Key Hash"
       }
     ]

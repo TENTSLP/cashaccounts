@@ -57,7 +57,7 @@ class CashAccounts {
    *
    * @param {string} username - ie: jonathan
    * @param {string} bchAddress - ie: bitcoincash:qqqqqqq
-   * @param {string} slpAddress - ie: simpleledger:qqqqqqq
+   * @param {string} slpAddress - ie: tt:qqqqqqq
    * @returns {obj} hex and txid
    * @memberof CashAccount
    */
@@ -366,7 +366,7 @@ class CashAccounts {
    *
    * @param {string} identifier
    * @param {string} hash
-   * @returns {string} address - bitcoincash:qqasdf or simpleledger:qq
+   * @returns {string} address - bitcoincash:qqasdf or tt:qq
    * @memberof CashAccounts
    */
   determineAddress(identifier, hash) {
@@ -606,7 +606,7 @@ class CashAccounts {
     const id = {};
 
     for (let item of address) {
-      if (item.startsWith('simpleledger:')) {
+      if (item.startsWith('tt:')) {
         item = bchaddr.toCashAddress(item);
       }
 
@@ -767,10 +767,10 @@ class CashAccounts {
   }
 
   /**
-   * convert to simpleledger format
+   * convert to tt format
    *
    * @param {string} addr
-   * @returns {string} simpeledger:qqajsdlkf
+   * @returns {string} tt:qqajsdlkf
    * @memberof CashAccounts
    */
   toSlpAddress(addr) {
